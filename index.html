@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Learning VueJs - Evan You</title>
+</head>
+<body>
+	<div id="vueContainer">
+		<h1>{{ pesan }}</h1>
+		<h1 v-show={{ !pesan }}>hello</h1>
+		<input v-model="pesan"></input>
+	</div>
+
+	<script src="vue.js"></script>
+
+	<script>
+		var data = {
+			pesan : 'Hello World of Vue'
+		};
+
+		new Vue({
+			el: '#vueContainer',
+			data: data
+		});
+
+	</script>
+
+</body>
+</html>
